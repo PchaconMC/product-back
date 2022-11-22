@@ -1,0 +1,14 @@
+com\inditex\product\controller\v1\ProductApiController$1.class
+com\inditex\product\dto\v1\ProductDetail.class
+com\inditex\product\controller\v1\ProductApiController.class
+io\reflectoring\api\ProductApiController$1.class
+com\inditex\product\controller\v1\ProductApiDelegate.class
+io\reflectoring\api\ProductApi.class
+com\inditex\product\controller\v1\ApiUtil.class
+io\reflectoring\api\ProductApiDelegate.class
+com\inditex\product\controller\v1\ProductApi$1.class
+io\reflectoring\api\ProductApiController.class
+com\inditex\product\controller\v1\ProductApi.class
+io\reflectoring\api\ApiUtil.class
+io\reflectoring\api\ProductApi$1.class
+io\reflectoring\model\ProductDetail.class

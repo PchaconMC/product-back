@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.inditex</groupId>
+    <artifactId>product-project</artifactId>
+    <version>${revision}</version>
+  </parent>
+  <groupId>com.inditex.specification</groupId>
+  <artifactId>specification</artifactId>
+  <packaging>pom</packaging>
+  <name>Specification</name>
+  <description>Specification for the api first</description>
+
+	<properties>
+		<openapi.generator.version>4.3.1</openapi.generator.version>
+		<swagger.annotations.version>1.5.22</swagger.annotations.version>
+		<jackson-nullable.version>0.2.1</jackson-nullable.version>
+	</properties>
+	<dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<version>${swagger.annotations.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openapitools</groupId>
+			<artifactId>jackson-databind-nullable</artifactId>
+			<version>${jackson-nullable.version}</version>
+		</dependency>
+	</dependencies>
+  
+	<modules>
+		<module>specification-product</module>
+	</modules>  
+</project>

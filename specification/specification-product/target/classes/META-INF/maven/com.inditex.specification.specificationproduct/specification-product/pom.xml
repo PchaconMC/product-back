@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+  		<groupId>com.inditex.specification</groupId>
+  		<artifactId>specification</artifactId>
+		<version>${revision}</version>
+	</parent>
+	<groupId>com.inditex.specification.specificationproduct</groupId>
+	<artifactId>specification-product</artifactId>
+	<name>Specification Product</name>
+	<description>Specification for  Product Service</description>
+
+	<properties>
+		<openapi.generator.version>4.3.1</openapi.generator.version>
+		<openapi.package.api>com.inditex.product.controller.v1</openapi.package.api>
+		<openapi.package.model>com.inditex.product.dto.v1</openapi.package.model>
+	</properties>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.openapitools</groupId>
+				<artifactId>openapi-generator-maven-plugin</artifactId>
+				<version>${openapi.generator.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<inputSpec>${project.basedir}/src/main/resources/similarProducts.yaml</inputSpec>
+							<generatorName>spring</generatorName>
+							<apiPackage>${openapi.package.api}</apiPackage>
+							<modelPackage>${openapi.package.model}</modelPackage>
+							<supportingFilesToGenerate>ApiUtil.java</supportingFilesToGenerate>
+							<configOptions>
+								<delegatePattern>true</delegatePattern>
+							</configOptions>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

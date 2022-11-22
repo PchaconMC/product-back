@@ -1,0 +1,75 @@
+openapi: 3.0.2
+info:
+  title: SimilarProducts
+  description: 'REST API operation that will provide the product detail of the similar products for a given one.'
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: pedro.chacon29@hotmail.com
+  license: 
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: '1.0'
+externalDocs:
+  description: Find out more about SimilarProducts
+  url: https://github.com/dalogax/backendDevTest
+servers:
+  - url: 'http://localhost:5000'
+tags:
+- name: similarproducts
+  description: Operations about detail of the similar products
+  externalDocs:
+    description: Find out more about our repository
+    url: https://github.com/dalogax/backendDevTest
+paths:
+  '/product/{productId}/similar':
+    get:
+      tags:
+        - similarproducts
+      summary: Get product detail of the similar products for a given one
+      operationId: getProductSimilar
+      parameters:
+        - name: productId
+          in: path
+          description: 'Identifier of the product from which you want to obtain similar products'
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                 $ref: '#/components/schemas/SimilarProducts'
+        '404':
+          description: Product Not found
+          content: {}
+components:
+  schemas:
+    SimilarProducts:
+      type: array
+      description: 'List of ProductDetail, similar products to a given one ordered by similarity'
+      minItems: 0
+      uniqueItems: true
+      items:
+        $ref: '#/components/schemas/ProductDetail'
+    ProductDetail:
+      description: 'Object ProductDetail, contains the detail of the similar product'
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          minLength: 1
+        name:
+          type: string
+          minLength: 1
+        price:
+          type: number
+        availability:
+          type: boolean
+      required:
+        - id
+        - name
+        - price
+        - availability
