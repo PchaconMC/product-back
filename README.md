@@ -37,6 +37,7 @@ The following topics will be considered:
 1.	Estructura del proyecto: se define la estructura de proyecto como un proyecto por módulos Maven
 
 
+![Structure-project](https://user-images.githubusercontent.com/60486812/203325499-bf3a7faa-e405-4699-9ed5-5c2b536200ee.png)
 
 
 - **product-project**: proyecto completo que agrupa una estructura por módulos 
@@ -64,4 +65,5 @@ ubicarnos en el proyecto product-project/specification/specification-product/ y 
 
 Los resultados se presentan en la siguiente gráfica:
 
+![results-test](https://user-images.githubusercontent.com/60486812/203325561-a18733d3-3bcc-4b4e-8c2b-605ce1c5af0b.PNG)
 
